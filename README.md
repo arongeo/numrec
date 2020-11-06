@@ -1,5 +1,5 @@
 # numrec
-"handwritten" number recognizer with pygame
+"handwritten" digit recognizer with pygame
 
 Dependencies:
   - Tensorflow ("pip install tensorflow")
