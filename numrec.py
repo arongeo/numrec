@@ -8,7 +8,7 @@ model = tf.keras.models.load_model("model.model")
 
 WIDTH = 560
 WIN = pygame.display.set_mode((WIDTH, WIDTH))
-pygame.display.set_caption("NumRec")
+pygame.display.set_caption("NumRec - mrmalac")
 GREY = (128, 128, 128)
 WHITE = (255,255,255)
 BLACK = (0,0,0)
@@ -36,7 +36,7 @@ class Spot:
 def predict(array, model):
     x_test = tf.keras.utils.normalize(array)
     prediction = model.predict([x_test])
-    print("Predicion is:", np.argmax(prediction[0]))
+    pygame.display.set_caption("NumRec - mrmalac - Prediction: " + np.argmax(prediction[0]))
 
 def make_grid(rows, width):
     grid = []
@@ -77,7 +77,7 @@ def draw_grid(win, rows, width):
 def main(win, width):
     ROWS = 28
     grid = make_grid(ROWS, width)
-    asdasd = np.zeros((10, 28, 28), dtype=int)
+    arr = np.zeros((10, 28, 28), dtype=int)
 
     running = True
     while running:
@@ -90,18 +90,19 @@ def main(win, width):
                 row, col = get_clicked_pos(pos, ROWS, width)
                 spot = grid[row][col]
                 spot.make_square()
-                asdasd[0][col][row] = 1
+                arr[0][col][row] = 1
             elif pygame.mouse.get_pressed()[2]:
                 pos = pygame.mouse.get_pos()
                 row, col = get_clicked_pos(pos, ROWS, width)
                 spot = grid[row][col]
                 spot.reset()
-                asdasd[0][col][row] = 0
+                arr[0][col][row] = 0
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_SPACE:
-                    predict(asdasd, model)
+                    predict(arr, model)
                 if event.key == pygame.K_r:
-                    asdasd = np.zeros((10, 28, 28))
+                    pygame.display.set_caption("NumRec - mrmalac")
+                    arr = np.zeros((10, 28, 28))
                     grid = make_grid(ROWS, width)
                 if event.key == pygame.K_q:
                     running = False
