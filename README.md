@@ -1,10 +1,7 @@
 # numrec
 "handwritten" digit recognizer with pygame
 
-Dependencies:
-  - Tensorflow ("pip install tensorflow")
-  - Numpy ("pip install numpy")
-  - Pygame ("pip install pygame")
+Install requirements using ```pip install -r requirements.txt```
 
 Controls:
   - R = resets the board
