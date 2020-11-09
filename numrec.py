@@ -36,7 +36,7 @@ class Spot:
 def predict(array, model):
     x_test = tf.keras.utils.normalize(array)
     prediction = model.predict([x_test])
-    pygame.display.set_caption("NumRec - mrmalac - Prediction: " + np.argmax(prediction[0]))
+    pygame.display.set_caption("NumRec - mrmalac - Prediction: " + str(np.argmax(prediction[0])))
 
 def make_grid(rows, width):
     grid = []
