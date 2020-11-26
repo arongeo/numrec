@@ -15,6 +15,6 @@ DISCLAIMER: This is my first ever deep learning project.
 
 ! You can fork my code, and edit my code, but please provide credit for it. !
 
-By definition if a github repository dosen't have a licence, it is automatically protected by intellectual property/copyright.
+By definition if a GitHub repository dosen't have a licence, it is automatically protected by intellectual property/copyright.
 
 ![](https://github.com/mrmalac/images_for_readmes/blob/main/numrec/numrec.gif)
