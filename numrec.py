@@ -8,7 +8,7 @@ model = tf.keras.models.load_model("model.model")
 
 WIDTH = 560
 WIN = pygame.display.set_mode((WIDTH, WIDTH))
-pygame.display.set_caption("NumRec - mrmalac")
+pygame.display.set_caption("NumRec - arongeo")
 GREY = (128, 128, 128)
 WHITE = (255,255,255)
 BLACK = (0,0,0)
